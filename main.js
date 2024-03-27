@@ -1,17 +1,20 @@
-const formName = document.querySelector('.form .name')
-const formTitle = document.querySelector('.form .title')
+document.addEventListener('DOMContentLoaded', function () {
+  const formName = document.querySelector('.form .name');
+  const formTitle = document.querySelector('.form .title');
+  const formPhone = document.querySelector('.form .phone');
+  const formEmail = document.querySelector('.form .email');
+  const card = document.querySelector('.card');
+  const cardName = card.querySelector('.name');
+  const cardTitle = card.querySelector('.title .value');
+  const cardPhone = card.querySelector('.phone .value');
+  const cardEmail = card.querySelector('.email .value');
+  const createCardBtn = document.querySelector('.form .btn');
 
-function toggleCard() {
-  var card = document.querySelector('.card');
-  card.classList.toggle('show');
-}
-
-
-const card = document.querySelector('.card')
-const cardName = document.querySelector('.card .name')
-const cardTitle = document.querySelector('.card .title .value')
-
-createCardBtn.addEventListener('click', function () {
-  card.classList.add('show')
-  cardName.innerHTML = formName.value
-})
+  createCardBtn.addEventListener('click', function () {
+    cardName.textContent = formName.value;
+    cardTitle.textContent = formTitle.value;
+    cardPhone.textContent = formPhone.value;
+    cardEmail.textContent = formEmail.value;
+    card.classList.add('show');
+  });
+});
